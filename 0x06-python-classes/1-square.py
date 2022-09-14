@@ -5,7 +5,7 @@ a class Square that defines a square by: (based on 0-square.py).
 
 class Square:
     """
-    a class Square that defines a square by: (based on 0-square.py).
+    __doc__:a class Square that defines a square.
     """
 
     def __init__(self,size):
