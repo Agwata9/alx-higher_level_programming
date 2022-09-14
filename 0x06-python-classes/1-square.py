@@ -14,3 +14,5 @@ class Square:
         """
 
         self.__size=size
+
+if __name__== "__main__":
