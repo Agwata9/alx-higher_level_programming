@@ -1,0 +1,7 @@
+>>> matrix_divided(not_all_num, 1)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> print(matrix_divided(matri, 0))
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
