@@ -5,6 +5,8 @@ an instance of the specified class ; otherwise False
 
 def is_same_class(obj, a_class):
     """
+    obj: variable to look at
+    a_class: class to compare
     is_same_class: function
     Returns:
     true if instance is exaxtly the same class otherwise returns false
