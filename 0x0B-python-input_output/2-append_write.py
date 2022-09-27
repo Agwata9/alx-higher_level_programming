@@ -1,19 +1,18 @@
 #!/usr/bin/python3
-# Agwata ALX Cohort 7'22
 
-"""
-a function that appends a string at the end of a text file (UTF8)
+""" Defines a function that append a string at
+    the end of a text file(UTF8).
 """
 
 
 def append_write(filename="", text=""):
-    """a function that appends a string to a text file
-    (UTF8) and returns the number of characters written
+    """ appends to a file if it exits
+        otherwise create the file and write to it.
+        And return the number of characters added.
     """
-    with open(filename, "a") as f:
-        char_count = 0
-        f.write(text)
+    with open(filename, 'a') as f:
+        num_of_chars = 0
         for i in text:
-            char_count += 1
+            num_of_chars += 1
             f.write(i)
-    return char_count
+    return num_of_chars
