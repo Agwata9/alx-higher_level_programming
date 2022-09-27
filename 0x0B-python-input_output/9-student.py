@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-# Agwata ALX Cohort 7'22
+"""
+a class Student that defines a student
+with public instances
+"""
+
 
 class Student:
     """student class ."""
