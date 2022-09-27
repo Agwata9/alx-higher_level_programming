@@ -12,7 +12,7 @@ def read_filewrite_file(filename="", text=""):
     """
     with open(filename, "w") as f:
         char_count = 0
-        f.write(text)
         for i in range(len(text)):
-            char_count = 1
+            f.write(text[i])
+            char_count += 1
     return char_count
