@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-# Agwata ALX Cohort 7'22
+"""
+a script that adds all arguments to a Python list
+and then save them to a file:
+"""
 
 
 def class_to_json(obj):
