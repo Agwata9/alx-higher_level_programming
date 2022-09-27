@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# Agwata ALX Cohort 7'22
 
 """
 a function that writes a string to a text file (UTF8)
