@@ -6,7 +6,7 @@ from a JSON file.
 
 
 def load_from_json_file(filename):
-    """Creates a python Object from a JSON file"""  
+    """Creates a python Object from a JSON file"""
     import json
 
     with open(filename) as f:
