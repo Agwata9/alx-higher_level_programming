@@ -7,8 +7,7 @@ and then save them to a file:
 
 def class_to_json(obj):
     """
-    a function that returns the dictionary description with simple data structure
-    (list, dictionary, string, integer and boolean) for JSON serialization of an object:
+    a function that returns the dictionary description
+    or JSON serialization of an object:
     """
-
     return obj.__dict__
