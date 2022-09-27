@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 # Agwata ALX Cohort 7'22
-""" a function that creates a python object
-    from a JSON file.
+"""
+a function that creates a python object
+from a JSON file.
 """
 
 
