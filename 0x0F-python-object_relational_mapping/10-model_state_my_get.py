@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-# Prints the first State object from the database hbtn_0e_6_usa.
-# Usage: ./8-model_state_fetch_first.py <mysql username> /
-#                                       <mysql password> /
-#                                       <database name>
+"""
+    A script that prints the State object with the name passed as an argument
+    from hbtn_0e_6_usa
+    Username, password, dbname and name to search
+    will be passed as arguments to the script.
+"""
 
 
 import sys
@@ -16,18 +18,20 @@ if __name__ == '__main__':
                            pool_pre_ping=True)
 
     Session = sessionmaker(bind=engine)
+
     Base.metadata.create_all(engine)
 
     # create a session
     session = Session()
 
     # extract first state
-    states = session.query(State).order_by(State.id).first()
+    states = session.query(State) \
+                    .filter(State.name == sys.argv[4]).one_or_none()
 
-    # print state
+    # print state.id
     if states is None:
-        print("Nothing")
+        print("Not found")
     else:
-        print("{}: {}".format(states.id, states.name))
+        print(states.id)
 
     session.close()
