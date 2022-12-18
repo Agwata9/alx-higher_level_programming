@@ -22,5 +22,6 @@ def searchapi():
     except:
         print("Not a valid JSON")
 
+
 if __name__ == "__main__":
     searchapi()
