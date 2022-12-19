@@ -8,7 +8,7 @@ def post():
     """status"""
     result = requests.post(sys.argv[1], data={"email": sys.argv[2]})
 
-    print(result.text)
+    print("Your email is: ".format{sys.argv[2]})
 
 
 if __name__ == "__main__":
