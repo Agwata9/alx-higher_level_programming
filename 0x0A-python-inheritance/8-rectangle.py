@@ -3,11 +3,12 @@
 subclass Rectangle
 """
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
 
 class Rectangle(BaseGeometry):
     """Sub class"""
+
     def __init__(self, width, height):
         """instantiation of the rectangle"""
         super().__init__()
