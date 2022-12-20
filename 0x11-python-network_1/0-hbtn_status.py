@@ -10,7 +10,7 @@ def fetcher():
         html = response.read()
         print("Body response:")
         print("\t- type: {}".format(type(html)))
-        print("\t- content: {}".format('b'"'OK'"))
+        print("\t- content: {}".format("b" "'OK'"))
         print("\t- utf8 content: {}".format("OK"))
 
 
