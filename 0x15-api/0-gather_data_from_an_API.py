@@ -1,21 +1,27 @@
-import requests
+#!/usr/bin/python3
+"""
+Task 0 - Python script that, using this REST API, for a given employee ID,
+returns information about his/her TODO list progress.
+"""
 
-def get_employee_todo_list(employee_id):
-    # API endpoint to get employee information
-    url = f"https://jsonplaceholder.typicode.com/users/{employee_id}"
-    response = requests.get(url)
-    employee = response.json()
+if __name__ == '__main__':
+    import requests
+    from sys import argv
 
-    # API endpoint to get employee tasks
-    url = f"https://jsonplaceholder.typicode.com/todos?userId={employee_id}"
-    response = requests.get(url)
-    tasks = response.json()
+    rq = requests.get('https://jsonplaceholder.typicode.com/users/{}'.
+                      format(argv[1]))
+    rqname = rq.json().get('name')
 
-    completed_tasks = [task for task in tasks if task["completed"]]
-    completed_count = len(completed_tasks)
-    total_count = len(tasks)
+    rq = requests.get('https://jsonplaceholder.typicode.com/todos?userId={}'.
+                      format(argv[1]))
+    rqdata = rq.json()
+    done = total = 0
+    for task in rqdata:
+        total += 1
+        if task.get('completed'):
+            done += 1
 
-    # Display employee task progress
-    print(f"Employee {employee['name']} is done with tasks({completed_count}/{total_count}):")
-    for task in completed_tasks:
-        print(f"\t {task['title']}")
+    print('Employee {} is done with tasks({}/{}):'.format(rqname, done, total))
+    for task in rqdata:
+        if task.get('completed'):
+            print('\t {}'.format(task.get('title')))
